@@ -1,0 +1,60 @@
+* F:\eSim\eSimMarathon\binarytogray\binarytogray.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 07/04/21 00:02:30
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+M2  B3NOT B3 Net-_M2-Pad3_ Net-_M2-Pad3_ eSim_MOS_P		
+M1  B3NOT B3 GND GND eSim_MOS_N		
+VA1  B3 GND DC		
+VDD1  Net-_M2-Pad3_ GND DC		
+VB1  B2 GND DC		
+M3  B2NOT B2 GND GND eSim_MOS_N		
+M4  B2NOT B2 Net-_M2-Pad3_ Net-_M2-Pad3_ eSim_MOS_P		
+U2  B3NOT plot_v1		
+U3  B2 plot_v1		
+U1  B3 plot_v1		
+U4  B2NOT plot_v1		
+M7  Net-_M7-Pad1_ B3NOT Net-_M15-Pad3_ Net-_M15-Pad3_ eSim_MOS_P		
+M9  Net-_M10-Pad3_ B3 Net-_M15-Pad3_ Net-_M15-Pad3_ eSim_MOS_P		
+M8  G2 B2 Net-_M7-Pad1_ Net-_M7-Pad1_ eSim_MOS_P		
+M10  G2 B2NOT Net-_M10-Pad3_ Net-_M10-Pad3_ eSim_MOS_P		
+VDD2  Net-_M15-Pad3_ GND DC		
+M5  G2 B3NOT Net-_M5-Pad3_ Net-_M5-Pad3_ eSim_MOS_N		
+M6  Net-_M5-Pad3_ B2NOT GND GND eSim_MOS_N		
+M11  G2 B3 Net-_M11-Pad3_ Net-_M11-Pad3_ eSim_MOS_N		
+M12  Net-_M11-Pad3_ B2 GND GND eSim_MOS_N		
+U5  G2 plot_v1		
+VB2  B1 GND DC		
+M21  B1NOT B1 GND GND eSim_MOS_N		
+M22  B1NOT B1 Net-_M2-Pad3_ Net-_M2-Pad3_ eSim_MOS_P		
+U7  B1 plot_v1		
+U9  B1NOT plot_v1		
+VB3  B0 GND DC		
+M27  B0NOT B0 GND GND eSim_MOS_N		
+M28  B0NOT B0 Net-_M2-Pad3_ Net-_M2-Pad3_ eSim_MOS_P		
+U10  B0 plot_v1		
+U11  B0NOT plot_v1		
+M15  Net-_M15-Pad1_ B2NOT Net-_M15-Pad3_ Net-_M15-Pad3_ eSim_MOS_P		
+M17  Net-_M17-Pad1_ B2 Net-_M15-Pad3_ Net-_M15-Pad3_ eSim_MOS_P		
+M16  G1 B1 Net-_M15-Pad1_ Net-_M15-Pad1_ eSim_MOS_P		
+M18  G1 B1NOT Net-_M17-Pad1_ Net-_M17-Pad1_ eSim_MOS_P		
+M13  G1 B2NOT Net-_M13-Pad3_ Net-_M13-Pad3_ eSim_MOS_N		
+M14  Net-_M13-Pad3_ B1NOT GND GND eSim_MOS_N		
+M19  G1 B2 Net-_M19-Pad3_ Net-_M19-Pad3_ eSim_MOS_N		
+M20  Net-_M19-Pad3_ B1 GND GND eSim_MOS_N		
+U8  G1 plot_v1		
+M25  Net-_M25-Pad1_ B1NOT Net-_M15-Pad3_ Net-_M15-Pad3_ eSim_MOS_P		
+M29  Net-_M29-Pad1_ B1 Net-_M15-Pad3_ Net-_M15-Pad3_ eSim_MOS_P		
+M26  G0 B0 Net-_M25-Pad1_ Net-_M25-Pad1_ eSim_MOS_P		
+M30  G0 B0NOT Net-_M29-Pad1_ Net-_M29-Pad1_ eSim_MOS_P		
+M23  G0 B1NOT Net-_M23-Pad3_ Net-_M23-Pad3_ eSim_MOS_N		
+M24  Net-_M23-Pad3_ B0NOT GND GND eSim_MOS_N		
+M31  G0 B1 Net-_M31-Pad3_ Net-_M31-Pad3_ eSim_MOS_N		
+M32  Net-_M31-Pad3_ B0 GND GND eSim_MOS_N		
+U12  G0 plot_v1		
+U6  B3 plot_v1		
+
+.end

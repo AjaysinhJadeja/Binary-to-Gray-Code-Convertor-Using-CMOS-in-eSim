@@ -1,0 +1,75 @@
+* f:\esim\esimmarathon\binarytogray\binarytogray.cir
+
+.include PMOS-180nm.lib
+.include NMOS-180nm.lib
+m2 b3not b3 net-_m2-pad3_ net-_m2-pad3_ CMOSP W=0.9u L=0.18u M=1
+m1 b3not b3 gnd gnd CMOSN W=0.36u L=0.18u M=1
+va1 b3 gnd  dc 0
+vdd1 net-_m2-pad3_ gnd  dc 5
+vb1 b2 gnd  dc 5
+m3 b2not b2 gnd gnd CMOSN W=0.36u L=0.18u M=1
+m4 b2not b2 net-_m2-pad3_ net-_m2-pad3_ CMOSP W=0.9u L=0.18u M=1
+* u2  b3not plot_v1
+* u3  b2 plot_v1
+* u1  b3 plot_v1
+* u4  b2not plot_v1
+m7 net-_m7-pad1_ b3not net-_m15-pad3_ net-_m15-pad3_ CMOSP W=0.9u L=0.18u M=1
+m9 net-_m10-pad3_ b3 net-_m15-pad3_ net-_m15-pad3_ CMOSP W=0.9u L=0.18u M=1
+m8 g2 b2 net-_m7-pad1_ net-_m7-pad1_ CMOSP W=0.9u L=0.18u M=1
+m10 g2 b2not net-_m10-pad3_ net-_m10-pad3_ CMOSP W=0.9u L=0.18u M=1
+vdd2 net-_m15-pad3_ gnd  dc 5
+m5 g2 b3not net-_m5-pad3_ net-_m5-pad3_ CMOSN W=0.36u L=0.18u M=1
+m6 net-_m5-pad3_ b2not gnd gnd CMOSN W=0.36u L=0.18u M=1
+m11 g2 b3 net-_m11-pad3_ net-_m11-pad3_ CMOSN W=0.36u L=0.18u M=1
+m12 net-_m11-pad3_ b2 gnd gnd CMOSN W=0.36u L=0.18u M=1
+* u5  g2 plot_v1
+vb2 b1 gnd  dc 5
+m21 b1not b1 gnd gnd CMOSN W=0.36u L=0.18u M=1
+m22 b1not b1 net-_m2-pad3_ net-_m2-pad3_ CMOSP W=0.9u L=0.18u M=1
+* u7  b1 plot_v1
+* u9  b1not plot_v1
+vb3 b0 gnd  dc 0
+m27 b0not b0 gnd gnd CMOSN W=0.36u L=0.18u M=1
+m28 b0not b0 net-_m2-pad3_ net-_m2-pad3_ CMOSP W=0.9u L=0.18u M=1
+* u10  b0 plot_v1
+* u11  b0not plot_v1
+m15 net-_m15-pad1_ b2not net-_m15-pad3_ net-_m15-pad3_ CMOSP W=0.9u L=0.18u M=1
+m17 net-_m17-pad1_ b2 net-_m15-pad3_ net-_m15-pad3_ CMOSP W=0.9u L=0.18u M=1
+m16 g1 b1 net-_m15-pad1_ net-_m15-pad1_ CMOSP W=0.9u L=0.18u M=1
+m18 g1 b1not net-_m17-pad1_ net-_m17-pad1_ CMOSP W=0.9u L=0.18u M=1
+m13 g1 b2not net-_m13-pad3_ net-_m13-pad3_ CMOSN W=0.36u L=0.18u M=1
+m14 net-_m13-pad3_ b1not gnd gnd CMOSN W=0.36u L=0.18u M=1
+m19 g1 b2 net-_m19-pad3_ net-_m19-pad3_ CMOSN W=0.36u L=0.18u M=1
+m20 net-_m19-pad3_ b1 gnd gnd CMOSN W=0.36u L=0.18u M=1
+* u8  g1 plot_v1
+m25 net-_m25-pad1_ b1not net-_m15-pad3_ net-_m15-pad3_ CMOSP W=0.9u L=0.18u M=1
+m29 net-_m29-pad1_ b1 net-_m15-pad3_ net-_m15-pad3_ CMOSP W=0.9u L=0.18u M=1
+m26 g0 b0 net-_m25-pad1_ net-_m25-pad1_ CMOSP W=0.9u L=0.18u M=1
+m30 g0 b0not net-_m29-pad1_ net-_m29-pad1_ CMOSP W=0.9u L=0.18u M=1
+m23 g0 b1not net-_m23-pad3_ net-_m23-pad3_ CMOSN W=0.36u L=0.18u M=1
+m24 net-_m23-pad3_ b0not gnd gnd CMOSN W=0.36u L=0.18 M=1
+m31 g0 b1 net-_m31-pad3_ net-_m31-pad3_ CMOSN W=0.36u L=0.18u M=1
+m32 net-_m31-pad3_ b0 gnd gnd CMOSN W=0.36u L=0.18u M=1
+* u12  g0 plot_v1
+* u6  b3 plot_v1
+.tran 0.01e-00 5e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(b3not)
+plot v(b2)
+plot v(b3)
+plot v(b2not)
+plot v(g2)
+plot v(b1)
+plot v(b1not)
+plot v(b0)
+plot v(b0not)
+plot v(g1)
+plot v(g0)
+plot v(b3)
+.endc
+.end
